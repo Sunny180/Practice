@@ -10,6 +10,13 @@ public class Tester {
 		Thread thread = new Thread(bt);
 		thread.start();
 		
+		try {
+			thread.join();
+		}catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("tester end");
+		
 		/*try {
 			System.out.println("Making breakfast");
 			Thread.sleep(4000);
